@@ -1,0 +1,56 @@
+.body {
+  height: 95vh;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.title-font {
+  font-family: "EB Garamond", serif;
+}
+
+.title {
+  font-family: "EB Garamond", serif;
+  font-size: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  margin: 20px;
+}
+
+.main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.form {
+  font-family: "Open Sans", sans-serif;
+  display: flex;
+  justify-content: space-around;
+}
+
+.dropdown {
+  border: none;
+  font-size: 16px;
+  border-bottom: 1px solid black;
+}
+
+.keyword {
+  border: 0;
+  border-bottom: 1px solid black;
+  font-size: 16px;
+  width: 43%;
+}
+
+.submit {
+  text-decoration: none;
+  color: red;
+  border-bottom: 1px solid black;
+  display: flex;
+  justify-content: center;
+  font-size: 24px;
+}
