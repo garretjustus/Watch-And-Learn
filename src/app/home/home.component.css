@@ -36,12 +36,10 @@
 .dropdown {
   border: none;
   font-size: 16px;
-  border-bottom: 1px solid black;
 }
 
 .keyword {
   border: 0;
-  border-bottom: 1px solid black;
   font-size: 16px;
   width: 43%;
 }
@@ -49,7 +47,7 @@
 .submit {
   text-decoration: none;
   color: red;
-  border-bottom: 1px solid black;
+  padding: 5px;
   display: flex;
   justify-content: center;
   font-size: 24px;
