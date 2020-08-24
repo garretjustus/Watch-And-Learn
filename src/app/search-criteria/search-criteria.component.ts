@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { NgForm } from '@angular/forms';
 import { SubmissionService } from '../submission.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-search-criteria',
@@ -10,7 +11,7 @@ import { SubmissionService } from '../submission.service';
 export class SearchCriteriaComponent implements OnInit {
   keywords: any;
 
-  constructor(private service: SubmissionService) {}
+  constructor(private service: SubmissionService, private router: Router) {}
 
   ngOnInit(): void {}
   getKeywords = (form: NgForm) => {
@@ -18,6 +19,18 @@ export class SearchCriteriaComponent implements OnInit {
     this.service.getKeywords(keyword).subscribe((response) => {
       console.log(response);
       this.keywords = response.results;
+    });
+  };
+
+  search = (form: NgForm) => {
+    console.log(form);
+    this.router.navigate(['home'], {
+      queryParams: {
+        language: form.value.language,
+        decadeGTE: form.value.decadeFrom,
+        decadeLTE: form.value.decadeTo,
+        keyword: form.value.keywordOption,
+      },
     });
   };
 }
