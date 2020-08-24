@@ -4,21 +4,20 @@ import { NgModule } from '@angular/core';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
-import { ResultsPageComponent } from './results-page/results-page.component';
-import { WatchlistComponent } from './watchlist/watchlist.component';
+import { SearchCriteriaComponent } from './search-criteria/search-criteria.component';
+import { MovieListComponent } from './movie-list/movie-list.component';
+import { WatchlistPageComponent } from './watchlist-page/watchlist-page.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
-    ResultsPageComponent,
-    WatchlistComponent
+    SearchCriteriaComponent,
+    MovieListComponent,
+    WatchlistPageComponent,
   ],
-  imports: [
-    BrowserModule,
-    AppRoutingModule
-  ],
+  imports: [BrowserModule, AppRoutingModule],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}
