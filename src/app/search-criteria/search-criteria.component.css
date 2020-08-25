@@ -4,9 +4,11 @@
   display: flex;
   flex-direction: column;
 }
+
 .title-font {
   font-family: "EB Garamond", serif;
 }
+
 .title {
   font-family: "EB Garamond", serif;
   font-size: 64px;
@@ -17,32 +19,39 @@
   margin: 10px;
   text-align: center;
 }
+
 .main {
   display: flex;
   flex-direction: column;
   align-items: center;
   text-align: center;
 }
+
 .form {
   display: flex;
 }
+
 .actual-form {
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
 }
+
 .dropdown {
   border: none;
   font-size: 16px;
 }
+
 .keyword {
   border: 0;
   font-size: 16px;
   border: none;
 }
+
 .keyword-selector {
   border: none;
 }
+
 .submit,
 .submit:active {
   text-decoration: none;
@@ -55,16 +64,20 @@
   background-color: white;
   outline: none;
 }
+
 .italics {
   font-style: italic;
 }
+
 hr {
   border-top: 1px dashed red;
   width: 75%;
 }
+
 .vertical_dotted_line {
   display: none;
 }
+
 @media only screen and (min-width: 600px) {
   .body {
     height: 95vh;
@@ -74,20 +87,32 @@ hr {
     flex-direction: column;
     justify-content: center;
   }
+
   hr {
     display: none;
   }
+
   .main {
     align-items: center;
     justify-content: center;
   }
+
   .form {
-    flex-direction: row;
     justify-content: center;
   }
+
   .actual-form {
-    flex-direction: row;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
   }
+
+  .section-1 {
+    flex-direction: row;
+  }
+
+  .section-2 {
+    flex-direction: row;
+  }
+
 }
