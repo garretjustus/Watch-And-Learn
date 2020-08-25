@@ -1,0 +1,16 @@
+.movie-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  margin-left: 20px;
+  width: 154px;
+}
+
+.movie-title {
+  font-weight: 600;
+}
+
+/* .movie-image {
+
+} */
