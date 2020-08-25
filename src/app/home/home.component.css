@@ -1,18 +1,23 @@
-.main {
-  display: flex;
-}
+@media only screen and (min-width: 600px) {
+  .main {
+    display: flex;
+  }
 
-.search-section {
-  flex: 1;
-}
+  .search-section {
+    flex: 1;
+  }
 
-.movie-section {
-  flex: 2;
-  /* display: grid;
+  .movie-section {
+    flex: 2;
+    /* display: grid;
   grid-gap: 50px;
   grid-template-columns: auto auto auto; */
-  display: flex;
-  flex-flow: wrap;
-  align-items: flex-end;
-  margin: 20px;
+    display: flex;
+    flex-flow: wrap;
+    align-items: flex-end;
+    margin: 20px;
+    height: 90vh;
+    overflow-y: scroll;
+    overflow-x: hidden;
+  }
 }

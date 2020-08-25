@@ -5,5 +5,23 @@
     alt="{{ movieRef.title }}"
     class="movie-image"
   />
+  <div class="below-image">
+    <p class="movie-year">{{ movieRef.release_date | date: "yyyy" }}</p>
+    <button class="wl-button">
+      <i class="far fa-plus-square"></i>
+    </button>
+  </div>
+</div>
+<div class="hidden movie-detail">
+  <p class="movie-title">{{ movieRef.title }}</p>
+  <img
+    src="{{ baseUrl }}{{ movieRef.poster_path }}"
+    alt="{{ movieRef.title }}"
+    class="movie-image"
+  />
   <p class="movie-year">{{ movieRef.release_date | date: "yyyy" }}</p>
+  <p>{{ movieRef.overview }}</p>
+  <button class="wl-button">
+    <i class="far fa-plus-square"></i>
+  </button>
 </div>
