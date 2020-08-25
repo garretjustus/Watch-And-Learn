@@ -1,1 +1,5 @@
-<p>movie-list works!</p>
+<div>
+  <p>{{movieRef.title}}</p>
+  <img src="{{baseUrl}}{{movieRef.poster_path}}" alt="{{movieRef.title}}">
+  <p>{{ movieRef.release_date | date:'yyyy' }} </p>
+</div>
