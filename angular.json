@@ -119,6 +119,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "Watch-And-Learn"
+    }
+  },
+  "defaultProject": "Watch-And-Learn",
+  "cli": {
+    "analytics": false
+  }
 }
