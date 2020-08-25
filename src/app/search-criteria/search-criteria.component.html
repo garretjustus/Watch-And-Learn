@@ -1,18 +1,12 @@
-<head>
-  <link
-    href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital@1&display=swap"
-    rel="stylesheet"
-  />
-  <link
-    href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap"
-    rel="stylesheet"
-  />
-</head>
 <body class="body">
   <h1 class="title title-font">Watch & Learn</h1>
   <section class="main">
     <div class="form">
-      <form #searchForm="ngForm" (ngSubmit)="search(searchForm)">
+      <form
+        #searchForm="ngForm"
+        (ngSubmit)="search(searchForm)"
+        class="actual-form"
+      >
         <label for="language">Language:</label>
         <select
           id="language"
@@ -69,13 +63,11 @@
           <option value="2019-12-31">2010's</option>
           <option value="2029-12-31">2020's</option>
         </select>
-
-        <select name="keywordOption" id="keywordOption" ngModel>
-          <option *ngFor="let keyword of keywords" value="{{ keyword.id }}">{{
-            keyword.name
-          }}</option>
-        </select>
-        <form #keywordForm="ngForm" (input)="getKeywords(keywordForm)">
+        <form
+          #keywordForm="ngForm"
+          (input)="getKeywords(keywordForm)"
+          class="keyword-form"
+        >
           <input
             type="text"
             class="keyword"
@@ -84,8 +76,14 @@
             ngModel
           />
         </form>
+        <select name="keywordOption" id="keywordOption" ngModel>
+          <option *ngFor="let keyword of keywords" value="{{ keyword.id }}">{{
+            keyword.name
+          }}</option>
+        </select>
         <button class="title-font submit" type="submit">Submit</button>
       </form>
     </div>
+    <hr class="horizontal-line" />
   </section>
 </body>
