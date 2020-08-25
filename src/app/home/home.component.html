@@ -11,17 +11,19 @@
   </section>
 </main>
 <div *ngIf="showIndex || showIndex === 0" class="popup-container">
-  <div class="popup">
-    <img
-      class="poster"
-      src="{{ baseUrl }}{{ movies[showIndex].poster_path }}"
-      alt=""
-    />
-    <p class="movie-title">{{ movies[showIndex].title }}</p>
-    <p class="movie-year">
-      {{ movies[showIndex].release_date | date: "yyyy" }}
-    </p>
-    <p>{{ movies[showIndex].overview }}</p>
+  <div class="popup-container" (click)="showIndex = undefined">
+    <div class="popup" (click)="$event.stopPropagation()">
+      <img
+        class="poster"
+        src="{{ baseUrl }}{{ movies[showIndex].poster_path }}"
+        alt=""
+      />
+      <p class="movie-title">{{ movies[showIndex].title }}</p>
+      <p class="movie-year">
+        {{ movies[showIndex].release_date | date: "yyyy" }}
+      </p>
+      <p>{{ movies[showIndex].overview }}</p>
+    </div>
   </div>
 </div>
 
