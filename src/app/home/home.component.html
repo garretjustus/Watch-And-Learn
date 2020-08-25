@@ -4,8 +4,28 @@
   </section>
   <section class="movie-section">
     <app-movie-list
-      *ngFor="let movie of movies"
+      *ngFor="let movie of movies; index as i"
       [movieRef]="movie"
+      (detailEvent)="setShowIndex(i)"
     ></app-movie-list>
   </section>
 </main>
+<div class="popup-container">
+  <div class="popup">
+    <p>{{ movies[showIndex] }}</p>
+  </div>
+</div>
+
+<!-- <div class="movie-detail">
+  <p class="movie-title">{{ movieRef.title }}</p>
+  <img
+    src="{{ baseUrl }}{{ movieRef.poster_path }}"
+    alt="{{ movieRef.title }}"
+    class="movie-image"
+  />
+  <p class="movie-year">{{ movieRef.release_date | date: "yyyy" }}</p>
+  <p>{{ movieRef.overview }}</p>
+  <button class="wl-button">
+    <i class="far fa-plus-square"></i>
+  </button>
+</div> -->

@@ -19,7 +19,7 @@ export class SubmissionService {
     });
   };
 
-  getData = (
+  getData: any = (
     language: string,
     decadeGTE: string,
     decadeLTE: string,

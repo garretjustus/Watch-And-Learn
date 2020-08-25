@@ -9,7 +9,7 @@ import { ActivatedRoute } from '@angular/router';
 })
 export class HomeComponent implements OnInit {
   movies: any;
-
+  showIndex: number;
   constructor(
     private service: SubmissionService,
     private route: ActivatedRoute
@@ -33,5 +33,10 @@ export class HomeComponent implements OnInit {
           this.movies = results.results;
         });
     });
+  };
+
+  setShowIndex = (index: number) => {
+    this.showIndex = index;
+    console.log(this.showIndex);
   };
 }
