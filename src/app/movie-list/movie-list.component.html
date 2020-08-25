@@ -1,5 +1,9 @@
-<div>
-  <p>{{movieRef.title}}</p>
-  <img src="{{baseUrl}}{{movieRef.poster_path}}" alt="{{movieRef.title}}">
-  <p>{{ movieRef.release_date | date:'yyyy' }} </p>
+<div class="movie-card">
+  <p class="movie-title">{{ movieRef.title }}</p>
+  <img
+    src="{{ baseUrl }}{{ movieRef.poster_path }}"
+    alt="{{ movieRef.title }}"
+    class="movie-image"
+  />
+  <p class="movie-year">{{ movieRef.release_date | date: "yyyy" }}</p>
 </div>

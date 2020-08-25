@@ -1,2 +1,11 @@
-<app-search-criteria></app-search-criteria>
-<app-movie-list *ngFor="let movie of movies" [movieRef]="movie"></app-movie-list>
+<main class="main">
+  <section class="search-section">
+    <app-search-criteria></app-search-criteria>
+  </section>
+  <section class="movie-section">
+    <app-movie-list
+      *ngFor="let movie of movies"
+      [movieRef]="movie"
+    ></app-movie-list>
+  </section>
+</main>
