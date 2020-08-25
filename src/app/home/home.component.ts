@@ -10,6 +10,8 @@ import { ActivatedRoute } from '@angular/router';
 export class HomeComponent implements OnInit {
   movies: any;
   showIndex: number;
+  baseUrl: string = 'https://image.tmdb.org/t/p/w300';
+
   constructor(
     private service: SubmissionService,
     private route: ActivatedRoute

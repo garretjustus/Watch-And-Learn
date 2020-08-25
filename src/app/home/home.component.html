@@ -10,9 +10,18 @@
     ></app-movie-list>
   </section>
 </main>
-<div class="popup-container">
+<div *ngIf="showIndex || showIndex === 0" class="popup-container">
   <div class="popup">
-    <p>{{ movies[showIndex] }}</p>
+    <img
+      class="poster"
+      src="{{ baseUrl }}{{ movies[showIndex].poster_path }}"
+      alt=""
+    />
+    <p class="movie-title">{{ movies[showIndex].title }}</p>
+    <p class="movie-year">
+      {{ movies[showIndex].release_date | date: "yyyy" }}
+    </p>
+    <p>{{ movies[showIndex].overview }}</p>
   </div>
 </div>
 
