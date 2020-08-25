@@ -8,6 +8,7 @@ export class SubmissionService {
   url: string = 'https://api.themoviedb.org/3/discover/movie';
   keywordUrl: string = 'https://api.themoviedb.org/3/search/keyword';
   key: string = '774dc051d9e43ff6c87c14a756a1fabc';
+  watchList = [];
   constructor(private http: HttpClient) {}
 
   getKeywords = (keyword: string): any => {
@@ -34,5 +35,9 @@ export class SubmissionService {
         with_keywords: keyword,
       },
     });
+  };
+
+  createWatchlist = (index: number) => {
+    this.watchList.push(index);
   };
 }
