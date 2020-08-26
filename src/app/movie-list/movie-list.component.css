@@ -19,9 +19,11 @@
   overflow: scroll;
 }
 
-.wl-button {
+.wl-button,
+.wl-button:active {
   background-color: transparent;
   border: none;
+  outline: none;
 }
 
 .fa-plus-square {

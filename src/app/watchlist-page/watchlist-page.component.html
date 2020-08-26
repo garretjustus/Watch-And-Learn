@@ -1,12 +1,21 @@
-<section>
-  <div *ngFor="let favorite of favorites; index as i">
+<div class="header">
+  <h1 class="title title-font">Watchlist</h1>
+  <button class="back-home title-font" (click)="toHome()">Back Home</button>
+</div>
+<section class="watchlist-grid">
+  <div class="watchlist-card" *ngFor="let favorite of favorites; index as i">
     <p class="movie-title">{{ favorite.title }}</p>
-    <img src="{{ baseUrl }}{{ favorite.poster_path }}" alt="{{ favorite.title }}" class="movie-image"
-      (click)="showDetails()" />
+    <img
+      src="{{ baseUrl }}{{ favorite.poster_path }}"
+      alt="{{ favorite.title }}"
+      class="movie-image"
+      (click)="showDetails()"
+    />
     <div class="below-image">
       <p class="movie-year">{{ favorite.release_date | date: "yyyy" }}</p>
-      <button (click)="deleteFav(i)">X</button>
+      <button class="delete-button" (click)="deleteFav(i)">
+        <i class="far fa-minus-square"></i>
+      </button>
     </div>
   </div>
-  <button (click)="toHome()">Go to Home</button>
 </section>

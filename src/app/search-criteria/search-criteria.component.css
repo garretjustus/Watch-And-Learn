@@ -89,6 +89,17 @@ hr {
   outline: none;
 }
 
+.description {
+  font-style: italic;
+  font-size: 18px;
+  font-weight: 400;
+  padding: 50px;
+  padding-top: 0;
+  padding-bottom: 30px;
+
+  text-align: center;
+}
+
 @media only screen and (min-width: 600px) {
   .body {
     height: 95vh;
@@ -99,8 +110,8 @@ hr {
     justify-content: center;
   }
 
-  hr {
-    display: none;
+  .title {
+    font-size: 90px;
   }
 
   .main {
@@ -126,5 +137,10 @@ hr {
   .section-2 {
     display: flex;
     flex-direction: row;
+  }
+
+  .watchlist-btn {
+    position: fixed;
+    bottom: 5%;
   }
 }
