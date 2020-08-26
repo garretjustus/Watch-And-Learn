@@ -68,5 +68,6 @@
 @media only screen and (min-width: 600px) {
   .watchlist-grid {
     flex-flow: wrap;
+    align-items: flex-end;
   }
 }
