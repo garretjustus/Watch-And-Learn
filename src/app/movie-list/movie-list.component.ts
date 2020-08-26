@@ -1,4 +1,5 @@
 import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
+import { SubmissionService } from '../submission.service';
 
 @Component({
   selector: 'app-movie-list',
@@ -8,12 +9,17 @@ import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 export class MovieListComponent implements OnInit {
   @Input() movieRef: any;
   @Output() detailEvent = new EventEmitter<void>();
+  @Output() addMovieEvent = new EventEmitter<void>();
   baseUrl: string = 'https://image.tmdb.org/t/p/w154';
 
-  constructor() {}
+  constructor(private service: SubmissionService) {}
 
   ngOnInit(): void {}
   showDetails = () => {
     this.detailEvent.emit();
+  };
+
+  addMovie = () => {
+    this.addMovieEvent.emit();
   };
 }

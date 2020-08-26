@@ -2,6 +2,12 @@
   visibility: hidden;
 } */
 
+.movie-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
 .movie-detail {
   position: fixed;
   z-index: 2;

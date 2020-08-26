@@ -33,4 +33,8 @@ export class SearchCriteriaComponent implements OnInit {
       },
     });
   };
+
+  openWatchlist = () => {
+    this.router.navigate(['watchlist']);
+  };
 }

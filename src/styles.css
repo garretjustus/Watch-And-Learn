@@ -4,3 +4,7 @@ button,
 select {
   font-family: "Open Sans", sans-serif;
 }
+
+.title-font {
+  font-family: "EB Garamond", serif;
+}
