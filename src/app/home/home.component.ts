@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { SubmissionService } from '../submission.service';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 
 @Component({
   selector: 'app-home',
@@ -11,7 +11,7 @@ export class HomeComponent implements OnInit {
   movies: any;
   showIndex: number;
   baseUrl: string = 'https://image.tmdb.org/t/p/w300';
-
+  favorites: any = [];
   constructor(
     private service: SubmissionService,
     private route: ActivatedRoute
@@ -40,5 +40,10 @@ export class HomeComponent implements OnInit {
   setShowIndex = (index: number) => {
     this.showIndex = index;
     console.log(this.showIndex);
+  };
+
+  sendFav = (movie: any) => {
+    this.service.addFav(movie);
+    console.log(movie);
   };
 }
