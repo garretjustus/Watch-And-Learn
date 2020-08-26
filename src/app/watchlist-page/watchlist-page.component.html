@@ -1,10 +1,12 @@
-<div *ngFor="let favorite of favorites; index as i">
-  <p>{{ favorite.title }}</p>
-  <img src="{{ baseUrl }}{{ favorite.poster_path }}" alt="{{ favorite.title }}" class="movie-image"
-    (click)="showDetails()" />
-  <div class="below-image">
-    <p class="movie-year">{{ favorite.release_date | date: "yyyy" }}</p>
-    <button (click)="deleteFav(i)">X</button>
+<section>
+  <div *ngFor="let favorite of favorites; index as i">
+    <p class="movie-title">{{ favorite.title }}</p>
+    <img src="{{ baseUrl }}{{ favorite.poster_path }}" alt="{{ favorite.title }}" class="movie-image"
+      (click)="showDetails()" />
+    <div class="below-image">
+      <p class="movie-year">{{ favorite.release_date | date: "yyyy" }}</p>
+      <button (click)="deleteFav(i)">X</button>
+    </div>
   </div>
-</div>
-<button (click)="toHome()">Go to Home</button>
+  <button (click)="toHome()">Go to Home</button>
+</section>

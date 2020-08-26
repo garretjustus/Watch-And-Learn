@@ -1,0 +1,9 @@
+.movie-title {
+  font-weight: 600;
+}
+
+.movie-year {
+  font-size: 18px;
+  margin: 5px 0;
+  font-style: italic;
+}
