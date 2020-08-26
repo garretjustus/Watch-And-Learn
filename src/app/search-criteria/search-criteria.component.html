@@ -1,5 +1,10 @@
 <body class="body">
   <h1 class="title title-font">Watch & Learn</h1>
+  <h2 class="description">
+    Bridge the gap between your out-of-date learning materials and how people
+    actually talk. Choose from our cutting-edge selection of newer features in
+    your target language or challenge yourself by watching a historical film.
+  </h2>
   <section class="main">
     <div class="form">
       <form
@@ -86,9 +91,9 @@
             />
           </form>
           <select name="keywordOption" id="keywordOption" ngModel>
-            <option *ngFor="let keyword of keywords" value="{{ keyword.id }}">{{
-              keyword.name
-            }}</option>
+            <option *ngFor="let keyword of keywords" value="{{ keyword.id }}">
+              {{ keyword.name }}
+            </option>
           </select>
         </section>
         <button class="title-font submit" type="submit">Submit</button>
